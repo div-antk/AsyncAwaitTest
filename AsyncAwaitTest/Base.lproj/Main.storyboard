@@ -29,6 +29,9 @@
                                         <rect key="frame" x="0.0" y="60" width="67" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="countUpButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yZS-aj-hGl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -50,13 +53,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="countUpButton" destination="UEN-JN-F4w" id="dL5-H8-2LT"/>
                         <outlet property="numberLabel" destination="NnQ-8W-yAS" id="V48-4l-jHP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="91"/>
+            <point key="canvasLocation" x="18.840579710144929" y="90.401785714285708"/>
         </scene>
     </scenes>
     <resources>

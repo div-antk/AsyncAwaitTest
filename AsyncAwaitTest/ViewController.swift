@@ -10,13 +10,19 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var numberLabel: UILabel!
-    @IBOutlet weak var countUpButton: UIButton!
+   
+    let vm = ViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        numberLabel.text = vm.message
     }
-
-
+    
+    @IBAction func countUpButtonAction(_ sender: Any) {
+        Task {
+            await vm.fetchMessage(url: "うどん")
+        }
+    }
 }
 
