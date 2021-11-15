@@ -16,12 +16,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        numberLabel.text = vm.message
     }
     
     @IBAction func countUpButtonAction(_ sender: Any) {
         Task {
-            await vm.fetchMessage(url: "うどん")
+            numberLabel.text = await vm.countUp()
         }
     }
 }
