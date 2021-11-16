@@ -17,31 +17,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eVb-Td-XhK">
-                                <rect key="frame" x="173.5" y="402.5" width="67" height="91"/>
+                                <rect key="frame" x="175" y="387" width="64" height="122"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnQ-8W-yAS">
-                                        <rect key="frame" x="18" y="0.0" width="31" height="60"/>
+                                        <rect key="frame" x="16.5" y="0.0" width="31" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEN-JN-F4w">
-                                        <rect key="frame" x="0.0" y="60" width="67" height="31"/>
+                                        <rect key="frame" x="0.0" y="60" width="64" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Sync"/>
                                         <connections>
                                             <action selector="countUpButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yZS-aj-hGl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EO3-ik-MIE">
+                                        <rect key="frame" x="0.0" y="91" width="64" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Async"/>
+                                        <connections>
+                                            <action selector="asyncCountUpButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mde-Np-rmj"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="NnQ-8W-yAS" firstAttribute="top" secondItem="eVb-Td-XhK" secondAttribute="top" id="9Jm-jB-Kee"/>
+                                    <constraint firstItem="EO3-ik-MIE" firstAttribute="top" secondItem="UEN-JN-F4w" secondAttribute="bottom" id="Afv-c6-aMy"/>
+                                    <constraint firstAttribute="trailing" secondItem="EO3-ik-MIE" secondAttribute="trailing" id="Klm-0x-tf1"/>
                                     <constraint firstItem="UEN-JN-F4w" firstAttribute="leading" secondItem="eVb-Td-XhK" secondAttribute="leading" id="Kqa-kg-EQB"/>
                                     <constraint firstItem="NnQ-8W-yAS" firstAttribute="centerX" secondItem="eVb-Td-XhK" secondAttribute="centerX" id="XOy-hM-rGp"/>
+                                    <constraint firstItem="EO3-ik-MIE" firstAttribute="leading" secondItem="eVb-Td-XhK" secondAttribute="leading" id="YeY-fA-uhn"/>
                                     <constraint firstItem="UEN-JN-F4w" firstAttribute="top" secondItem="NnQ-8W-yAS" secondAttribute="bottom" id="Z9T-od-KFi"/>
                                     <constraint firstAttribute="trailing" secondItem="UEN-JN-F4w" secondAttribute="trailing" id="bmP-aG-uBw"/>
-                                    <constraint firstAttribute="bottom" secondItem="UEN-JN-F4w" secondAttribute="bottom" id="xnd-L2-YDL"/>
+                                    <constraint firstAttribute="bottom" secondItem="EO3-ik-MIE" secondAttribute="bottom" id="f3H-1R-biI"/>
                                 </constraints>
                             </view>
                         </subviews>

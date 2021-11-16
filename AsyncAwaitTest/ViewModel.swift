@@ -12,7 +12,7 @@ actor ViewModel: ObservableObject {
     
     var count: Int = 0
     
-    func countUp() async -> String {
+    func asyncCountUp() async -> String {
         sleep(1)
         self.count += 1
        

@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var numberLabel: UILabel!
    
     let vm = ViewModel()
+    var count = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +20,28 @@ class ViewController: UIViewController {
     }
     
     @IBAction func countUpButtonAction(_ sender: Any) {
+        numberLabel.text = syncCountUp()
+    }
+    
+    @IBAction func asyncCountUpButtonAction(_ sender: Any) {
         Task {
-            numberLabel.text = await vm.countUp()
+            print("あしんく")
+            numberLabel.text = await asyncCountUp()
         }
+    }
+    
+    func syncCountUp() -> String {
+        sleep(5)
+        self.count += 1
+       
+        return String(count)
+    }
+
+    func asyncCountUp() async -> String {
+        sleep(5)
+        self.count += 1
+       
+        return String(count)
     }
 }
 
