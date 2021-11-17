@@ -18,16 +18,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
     }
+   
     
-    @IBAction func countUpButtonAction(_ sender: Any) {
+    @IBAction func syncCountUpButtonAction(_ sender: Any) {
         numberLabel.text = syncCountUp()
+        print("しんく")
     }
     
     @IBAction func asyncCountUpButtonAction(_ sender: Any) {
         Task {
+            let text = await asyncCountUp()
+            self.numberLabel.text = text
             print("あしんく")
-            numberLabel.text = await asyncCountUp()
         }
+        print("並列実行")
     }
     
     func syncCountUp() -> String {
